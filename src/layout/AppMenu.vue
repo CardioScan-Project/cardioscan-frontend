@@ -5,28 +5,28 @@ import AppMenuItem from './AppMenuItem.vue';
 
 const model = ref([
     {
-        label: 'Home',
+        label: 'Inicio',
         items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
     },
     {
-        label: 'Patients',
+        label: 'Pacientes',
         items: [
-            { label: 'New Patient', icon: 'pi pi-fw pi-user-plus', to: '/newPatient' },
-            { label: 'Patient List', icon: 'pi pi-fw pi-users', to: '/patientList' }
+            { label: 'Nueva Paciente', icon: 'pi pi-fw pi-user-plus', to: '/newPatient' },
+            { label: 'Lista de Pacientes', icon: 'pi pi-fw pi-users', to: '/patientList' }
         ]
     },
     {
         label: 'Screening',
         items: [
-            { label: 'Start Screening', icon: 'pi pi-fw pi-play', to: '/screening' },
-            { label: 'Screening History', icon: 'pi pi-fw pi-history', to: '/screeningHistory' }
+            { label: 'Iniciar Screening', icon: 'pi pi-fw pi-play', to: '/screening' },
+            { label: 'Historial de Screenings', icon: 'pi pi-fw pi-history', to: '/screeningHistory' }
         ]
     },
     {
-        label: 'User',
+        label: 'Usuario',
         items: [
-            { label: 'My Profile', icon: 'pi pi-fw pi-user', to: '/profile' },
-            { label: 'Change Password', icon: 'pi pi-fw pi-user-edit', to: '/changePassword' }
+            { label: 'Mi Perfil', icon: 'pi pi-fw pi-user', to: '/profile' },
+            { label: 'Cambiar Contraseña', icon: 'pi pi-fw pi-user-edit', to: '/changePassword' }
         ]
     }
 ]);
