@@ -11,7 +11,7 @@ const { onMenuToggle } = useLayout();
                 <i class="pi pi-bars"></i>
             </button>
             <router-link to="/" class="layout-topbar-logo">
-                <svg version="1.0" width="411.000000pt" height="329.000000pt" viewBox="0 0 411.000000 329.000000" preserveAspectRatio="xMidYMid meet">
+                <svg version="1.0" width="auto" height="auto" viewBox="0 0 411.000000 329.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,329.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                         <path
                             d="M1280 2974 c-196 -42 -354 -127 -496 -269 -118 -117 -189 -237 -234
