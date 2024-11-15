@@ -19,19 +19,14 @@ const router = createRouter({
                     component: () => import('@/views/NewPatient.vue')
                 },
                 {
-                    path: '/patientList',
-                    name: 'patientList',
-                    component: () => import('@/views/PatientList.vue')
+                    path: '/searchPatient',
+                    name: 'searchPatient',
+                    component: () => import('@/views/SearchPatient.vue')
                 },
                 {
                     path: '/screening',
                     name: 'screening',
                     component: () => import('@/views/Screening.vue')
-                },
-                {
-                    path: '/screeningHistory',
-                    name: 'screeningHistory',
-                    component: () => import('@/views/ScreeningHistory.vue')
                 },
                 {
                     path: '/profile',

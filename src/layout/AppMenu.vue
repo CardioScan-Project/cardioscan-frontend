@@ -12,15 +12,12 @@ const model = ref([
         label: 'Pacientes',
         items: [
             { label: 'Nueva Paciente', icon: 'pi pi-fw pi-user-plus', to: '/newPatient' },
-            { label: 'Lista de Pacientes', icon: 'pi pi-fw pi-users', to: '/patientList' }
+            { label: 'Buscar Paciente', icon: 'pi pi-fw pi-users', to: '/searchPatient' }
         ]
     },
     {
         label: 'Screening',
-        items: [
-            { label: 'Iniciar Screening', icon: 'pi pi-fw pi-play', to: '/screening' },
-            { label: 'Historial de Screenings', icon: 'pi pi-fw pi-history', to: '/screeningHistory' }
-        ]
+        items: [{ label: 'Iniciar Screening', icon: 'pi pi-fw pi-play', to: '/screening' }]
     },
     {
         label: 'Usuario',
