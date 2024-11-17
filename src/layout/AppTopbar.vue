@@ -1,7 +1,14 @@
 <script setup>
 import { useLayout } from '@/layout/composables/layout';
+import { useRouter } from 'vue-router';
 
 const { onMenuToggle } = useLayout();
+const router = useRouter();
+
+function logout() {
+    localStorage.removeItem('token');
+    router.push({ name: 'login' });
+}
 </script>
 
 <template>
@@ -55,9 +62,9 @@ c52 -135 101 -251 110 -257 24 -18 60 -16 81 5 9 10 66 151 126 315 60 163
             </button>
             <div class="layout-topbar-menu hidden lg:block">
                 <div class="layout-topbar-menu-content">
-                    <button type="button" class="layout-topbar-action">
+                    <button @click="logout" type="button" class="layout-topbar-action">
                         <i class="pi pi-sign-out"></i>
-                        <span>Sign Out</span>
+                        <span>Cerrar Sesión</span>
                     </button>
                 </div>
             </div>

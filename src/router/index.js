@@ -1,12 +1,28 @@
 import AppLayout from '@/layout/AppLayout.vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
+
+function isAuthenticated() {
+    const token = localStorage.getItem('token');
+    return token != null;
+}
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
+        {
+            path: '/auth/login',
+            name: 'login',
+            component: () => import('@/views/auth/Login.vue')
+        },
+        {
+            path: '/auth/forgotPassword',
+            name: 'forgotPassword',
+            component: () => import('@/views/auth/ForgotPassword.vue')
+        },
         {
             path: '/',
             component: AppLayout,
+            meta: { requiresAuth: true },
             children: [
                 {
                     path: '/',
@@ -37,10 +53,22 @@ const router = createRouter({
                     path: '/changePassword',
                     name: 'changePassword',
                     component: () => import('@/views/ChangePassword.vue')
+                },
+                {
+                    path: '/:pathMatch(.*)*',
+                    component: () => import('@/views/Dashboard.vue')
                 }
             ]
         }
     ]
+});
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some((record) => record.meta.requiresAuth) && !isAuthenticated()) {
+        next({ name: 'login' });
+    } else {
+        next();
+    }
 });
 
 export default router;
